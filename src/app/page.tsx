@@ -6,9 +6,9 @@ import { pageMetadata } from "@/lib/seo";
 import { FolderOpenDot, MessagesCircle, TableOfContents, MousePointerClick, MoveDown, GitCompareArrows } from "lucide-react";
 
 export const metadata = pageMetadata({
-  title: "Polityra — Open technology. Built for everyone.",
+  title: "Polityra — Open-Source Projects for Research & Technology",
   description:
-    "Discover Polityra, an open-source organization creating projects for research, website building, and accessible technology.",
+    "Polityra is an independent open-source organization building projects for geopolitical research, strategic analysis, AI-assisted websites, and accessible technology.",
   path: "/",
   home: true,
 });
@@ -186,8 +186,8 @@ export default function Home() {
             <p>
               If you&apos;re interested in contributing, start by exploring
               the public Open Polityra repository and its current guidance.
-              Polityra CMS does not yet have a verified public repository
-              listed here.
+              Polityra CMS also has a public repository; visit its project
+              page for the verified link.
             </p>
             <Link className="text-link" href="/community">
               Ways to contribute <span aria-hidden="true">

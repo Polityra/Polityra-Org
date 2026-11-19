@@ -7,21 +7,37 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Polityra — Open technology. Built for everyone.",
+    default: "Polityra — Open-Source Projects for Research & Technology",
     template: "%s | Polityra",
   },
   description:
-    "Polityra creates open-source projects that make technology, research, and innovation more accessible to everyone.",
+    "Polityra is an independent open-source organization building projects for geopolitical research, strategic analysis, AI-assisted websites, and accessible technology.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  const organizationData = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Polityra",
-    url: siteUrl,
-    logo: `${siteUrl}/images/Polityra-logo.png`,
-    sameAs: ["https://github.com/Polityra"],
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Polityra",
+        url: siteUrl,
+        logo: `${siteUrl}/images/Polityra-logo.png`,
+        description:
+          "An independent open-source organization building projects for research, technology, and accessible knowledge.",
+        sameAs: ["https://github.com/Polityra"],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        name: "Polityra",
+        url: siteUrl,
+        description: metadata.description,
+        publisher: { "@id": `${siteUrl}/#organization` },
+        inLanguage: "en",
+      },
+    ],
   };
 
   return (
@@ -34,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationData).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
       </body>

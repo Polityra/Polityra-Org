@@ -163,10 +163,12 @@ Known technical direction includes:
 -   Local AI development support
 -   Electron desktop application support
 
-Use the supplied Polityra CMS project logo. Do not invent a public
-repository URL, demo, documentation destination, release version,
-download, or feature availability. Add links only after maintainers
-verify them.
+Repository: https://github.com/Polityra/Polityra-CMS
+
+Use the supplied Polityra CMS project logo and link to its verified
+repository. Do not invent a demo, documentation destination, release
+version, download, or feature availability. Add links only after
+maintainers verify them.
 
 ### 5.3 Future projects
 
@@ -497,4 +499,9 @@ Set each page's title, description, and canonical path using
 Open Graph and X/Twitter metadata. Project detail metadata is derived
 from `src/lib/projects.ts`; adding a project there also adds it to the
 sitemap. Keep descriptions accurate, and update the social image
-dimensions in the helper if the banner is replaced.
+dimensions in the helper if the banner is replaced. Use a project's
+optional `seoTitle` only when a concise, accurate search title differs
+from its display name. Keep the organization and website JSON-LD aligned
+with verified site information; add software structured data only for a
+project with a verified public source repository. Search rankings cannot
+be guaranteed by on-site changes alone.

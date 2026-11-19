@@ -4,7 +4,7 @@ import { FolderOpenDot, MousePointer, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/projects";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, siteUrl } from "@/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -25,7 +25,7 @@ export async function generateMetadata({
   }
 
   return pageMetadata({
-    title: project.name,
+    title: project.seoTitle ?? project.name,
     description: project.description,
     path: `/projects/${project.slug}`,
   });
@@ -39,8 +39,28 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
+  const projectStructuredData = project.repository
+    ? {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        name: project.name,
+        description: project.description,
+        url: `${siteUrl}/projects/${project.slug}`,
+        codeRepository: project.repository,
+        author: { "@id": `${siteUrl}/#organization` },
+      }
+    : null;
+
   return (
     <div className="page-shell inner-page project-detail-page">
+      {projectStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(projectStructuredData).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
       <Link className="back-link" href="/projects">
         <span aria-hidden="true">
           <ArrowLeft color="white" size={12} />

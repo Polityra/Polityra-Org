@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 import { FolderOpenDot } from "lucide-react";
 
@@ -68,8 +69,10 @@ export default function CommunityPage() {
           <h2>Start with the project you care about.</h2>
           <p>
             Open Polityra has a public repository where you can explore the
-            project and its current contribution guidance. For Polityra CMS,
-            a public repository or community destination has not been supplied.
+            project and its current contribution guidance. Polityra CMS also
+            has a public repository; see its{" "}
+            <Link href="/projects/polityra-cms">project page</Link> for the verified
+            link.
           </p>
         </div>
         <a

@@ -1,6 +1,7 @@
 export type Project = {
   slug: string;
   name: string;
+  seoTitle?: string;
   category: string;
   description: string;
   fullDescription: string;
@@ -15,11 +16,12 @@ export const projects: Project[] = [
   {
     slug: "open-polityra",
     name: "Open Polityra",
+    seoTitle: "Open Polityra: Open-Source Geopolitical Research",
     category: "Research & strategic intelligence",
     description:
-      "An independent open-source platform for research, analysis, forecasting, and understanding complex developments.",
+      "Open Polityra is an open-source geopolitical research and strategic-intelligence project for analyzing complex developments, exploring scenarios, and organizing sources.",
     fullDescription:
-      "Open Polityra is an independent research and strategic-intelligence project. Its aim is to support thoughtful analysis of complex developments through research, source management, and scenario work.",
+      "Open Polityra is an independent open-source geopolitical research and strategic-intelligence project. It aims to support thoughtful analysis of complex developments through research, source management, and scenario work.",
     audience:
       "People working with research, analysis, and complex questions across geopolitical, economic, security, and resilience topics.",
     focusAreas: [
@@ -36,6 +38,7 @@ export const projects: Project[] = [
   },
   {
     slug: "polityra-cms",
+    seoTitle: "Polityra CMS: AI-Assisted Website Creation",
     name: "Polityra CMS",
     category: "AI-assisted website creation",
     description:
@@ -51,9 +54,10 @@ export const projects: Project[] = [
       "A MySQL backend and shared UI components",
       "Local AI development and desktop application support",
     ],
+    repository: "https://github.com/Polityra/Polityra-CMS",
     logo: "/images/projects/polityra-cms-logo-dark.png",
     note:
-      "These items describe the project's intended direction, not a guarantee of current feature availability. A public repository, demo, or documentation link has not been supplied.",
+      "These items describe the project's intended direction, not a guarantee of current feature availability. The public repository is available; no demo or documentation destination has been supplied.",
   },
 ];
 
