@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import { FolderOpenDot } from "lucide-react";
 
 export const metadata = pageMetadata({
   title: "Principles",
@@ -70,7 +71,9 @@ export default function PrinciplesPage() {
         <p className="eyebrow">Take part</p>
         <h2>Help shape what comes next.</h2>
         <Link className="button button-secondary" href="/community">
-          Ways to contribute <span aria-hidden="true">↗</span>
+          Ways to contribute <span aria-hidden="true">
+            <FolderOpenDot color="white" size={12} />
+          </span>
         </Link>
       </section>
     </div>

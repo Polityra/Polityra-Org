@@ -1,5 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 
+import { FolderOpenDot } from "lucide-react";
+
 export const metadata = pageMetadata({
   title: "Get involved",
   description:
@@ -76,7 +78,9 @@ export default function CommunityPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit Open Polityra on GitHub <span aria-hidden="true">↗</span>
+          Visit Open Polityra on GitHub <span aria-hidden="true">
+            <FolderOpenDot color="black" size={12} />
+          </span>
         </a>
       </section>
     </div>

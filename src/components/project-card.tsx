@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/lib/projects";
+import { FolderOpenDot, GitCompareArrows } from "lucide-react";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -29,7 +30,9 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="project-card-links">
         <Link className="text-link" href={`/projects/${project.slug}`}>
-          Explore project <span aria-hidden="true">↗</span>
+          Explore project <span aria-hidden="true">
+            <FolderOpenDot color="white" size={12} />
+          </span>
         </Link>
         {project.repository && (
           <a
@@ -38,7 +41,9 @@ export function ProjectCard({ project }: { project: Project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub <span aria-hidden="true">↗</span>
+            GitHub <span aria-hidden="true">
+              <GitCompareArrows color="white" size={12} />
+            </span>
           </a>
         )}
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FolderOpenDot, MousePointer, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/lib/projects";
@@ -41,7 +42,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="page-shell inner-page project-detail-page">
       <Link className="back-link" href="/projects">
-        <span aria-hidden="true">←</span> All projects
+        <span aria-hidden="true">
+          <ArrowLeft color="white" size={12} />
+        </span> All projects
       </Link>
       <header className="project-detail-heading">
         <p className="eyebrow"><span className="status-dot" /> {project.category}</p>
@@ -66,7 +69,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View repository <span aria-hidden="true">↗</span>
+            View repository <span aria-hidden="true">
+              <FolderOpenDot color="black" size={12} />
+            </span>
           </a>
         )}
       </header>
@@ -79,7 +84,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <ul className="focus-list">
             {project.focusAreas.map((area) => (
               <li key={area}>
-                <span aria-hidden="true">↗</span> {area}
+                <span aria-hidden="true">
+                  <FolderOpenDot color="black" size={12} />
+                </span> {area}
               </li>
             ))}
           </ul>
@@ -102,7 +109,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="detail-bottom-cta">
         <p>Explore the wider Polityra ecosystem.</p>
         <Link className="text-link" href="/projects">
-          Browse all projects <span aria-hidden="true">↗</span>
+          Browse all projects <span aria-hidden="true">
+            <FolderOpenDot color="white" size={12} />
+          </span>
         </Link>
       </div>
     </div>

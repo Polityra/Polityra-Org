@@ -3,6 +3,8 @@ import { ProjectCard } from "@/components/project-card";
 import { projects } from "@/lib/projects";
 import { pageMetadata } from "@/lib/seo";
 
+import { FolderOpenDot, MessagesCircle, TableOfContents, MousePointerClick, MoveDown, GitCompareArrows } from "lucide-react";
+
 export const metadata = pageMetadata({
   title: "Polityra — Open technology. Built for everyone.",
   description:
@@ -24,14 +26,18 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/projects">
-              Explore projects <span aria-hidden="true">↗</span>
+              Explore projects <span aria-hidden="true">
+                <FolderOpenDot size={16} />
+              </span>
             </Link>
             <Link className="button button-secondary" href="/community">
               Get involved
             </Link>
           </div>
           <a className="hero-discover" href="#introduction">
-            Discover Polityra <span aria-hidden="true">↓</span>
+            Discover Polityra <span aria-hidden="true">
+              <MoveDown size={12} />
+            </span>
           </a>
         </div>
       </section>
@@ -52,7 +58,9 @@ export default function Home() {
               development, and build on shared work.
             </p>
             <Link className="text-link" href="/about">
-              More about Polityra <span aria-hidden="true">↗</span>
+              More about Polityra <span aria-hidden="true">
+                <TableOfContents color="white" size={12} />
+              </span>
             </Link>
           </div>
         </div>
@@ -65,7 +73,9 @@ export default function Home() {
             <h2>What we&apos;re working on.</h2>
           </div>
           <Link className="text-link" href="/projects">
-            View all projects <span aria-hidden="true">↗</span>
+            View all projects <span aria-hidden="true">
+              <FolderOpenDot color="white" size={12} />
+            </span>
           </Link>
         </div>
         <div className="project-grid">
@@ -99,7 +109,9 @@ export default function Home() {
               development matter throughout that work.
             </p>
             <Link className="text-link" href="/principles">
-              Read our principles <span aria-hidden="true">↗</span>
+              Read our principles <span aria-hidden="true">
+                <MousePointerClick color="white" size={12} />
+              </span>
             </Link>
           </div>
         </div>
@@ -129,7 +141,9 @@ export default function Home() {
                 every capability is available today.
               </p>
               <Link className="text-link" href="/projects/open-polityra">
-                About Open Polityra <span aria-hidden="true">↗</span>
+                About Open Polityra <span aria-hidden="true">
+                  <FolderOpenDot color="white" size={12} />
+                </span>
               </Link>
             </div>
           </article>
@@ -148,7 +162,9 @@ export default function Home() {
                 confirmed.
               </p>
               <Link className="text-link" href="/projects/polityra-cms">
-                About Polityra CMS <span aria-hidden="true">↗</span>
+                About Polityra CMS <span aria-hidden="true">
+                  <FolderOpenDot color="white" size={12} />
+                </span>
               </Link>
             </div>
           </article>
@@ -174,7 +190,9 @@ export default function Home() {
               listed here.
             </p>
             <Link className="text-link" href="/community">
-              Ways to contribute <span aria-hidden="true">↗</span>
+              Ways to contribute <span aria-hidden="true">
+                <FolderOpenDot color="white" size={12} />
+              </span>
             </Link>
           </div>
         </div>
@@ -191,7 +209,9 @@ export default function Home() {
               </p>
             </div>
             <a className="button button-primary" href="https://github.com/Polityra" target="_blank" rel="noopener noreferrer">
-              Visit GitHub <span aria-hidden="true">↗</span>
+              Visit GitHub <span aria-hidden="true">
+                <GitCompareArrows color="black" size={12} />
+              </span>
             </a>
           </div>
         </div>

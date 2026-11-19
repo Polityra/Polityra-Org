@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import { FolderOpenDot, Mouse } from "lucide-react";
 
 export const metadata = pageMetadata({
   title: "Contact",
@@ -36,11 +37,15 @@ export default function ContactPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visit GitHub organization <span aria-hidden="true">↗</span>
+          Visit GitHub organization <span aria-hidden="true">
+            <Mouse color="black" size={12} />
+          </span>
         </a>
       </section>
       <Link className="text-link" href="/projects">
-        Explore Polityra projects <span aria-hidden="true">↗</span>
+        Explore Polityra projects <span aria-hidden="true">
+            <FolderOpenDot color="white" size={12} />
+        </span>
       </Link>
     </div>
   );

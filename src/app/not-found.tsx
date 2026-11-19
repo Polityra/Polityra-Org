@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function NotFound() {
@@ -11,7 +12,9 @@ export default function NotFound() {
       </p>
       <div className="hero-actions">
         <Link className="button button-primary" href="/">
-          Go to home <span aria-hidden="true">↗</span>
+          Go to home <span aria-hidden="true">
+            <ArrowLeft color="white" size={12} />
+          </span>
         </Link>
         <Link className="button button-secondary" href="/projects">
           Explore projects

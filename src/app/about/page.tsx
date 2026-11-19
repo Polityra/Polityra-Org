@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import { FolderOpenDot, MessagesCircle, TableOfContents, MousePointerClick, MoveDown, GitCompareArrows } from "lucide-react";
 
 export const metadata = pageMetadata({
   title: "About",
@@ -64,7 +65,9 @@ export default function AboutPage() {
             They are not features of one shared product.
           </p>
           <Link className="text-link" href="/projects">
-            Meet the projects <span aria-hidden="true">↗</span>
+            Meet the projects <span aria-hidden="true">
+              <FolderOpenDot color="white" size={12} />
+            </span>
           </Link>
         </div>
       </section>
@@ -73,7 +76,9 @@ export default function AboutPage() {
         <p className="eyebrow">Curious about how we work?</p>
         <h2>Our principles guide every project.</h2>
         <Link className="button button-secondary" href="/principles">
-          Read our principles <span aria-hidden="true">↗</span>
+          Read our principles <span aria-hidden="true">
+            <MessagesCircle color="white" size={12} />
+          </span>
         </Link>
       </section>
     </div>

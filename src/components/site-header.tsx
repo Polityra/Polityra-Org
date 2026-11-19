@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
+import { MessageCircle } from "lucide-react";
 const navigation = [
   { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
@@ -74,7 +74,9 @@ export function SiteHeader() {
             href="/contact"
             onClick={() => setMenuOpen(false)}
           >
-            Contact <span aria-hidden="true">↗</span>
+            Contact <span aria-hidden="true">
+              <MessageCircle color="white" size={12} />
+            </span>
           </Link>
         </nav>
       </div>

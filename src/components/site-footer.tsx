@@ -40,7 +40,7 @@ export function SiteFooter() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub organization <span aria-hidden="true">↗</span>
+            GitHub organization
           </a>
         </div>
       </div>
